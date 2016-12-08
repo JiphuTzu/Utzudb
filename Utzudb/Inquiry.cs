@@ -6,32 +6,32 @@ namespace Utzudb{
 	 * @author JiphuTzu
 	 */
 	public interface Inquiry<T> {
-        T this[int index] { get; }
-        Inquiry<T> Select(Comparutzu<T> comparison);
-        /// <summary>
-        /// 查找所有满足条件的数据
-        /// </summary>
-        /// <param name="param"></param>
-        /// <param name="op"></param>
-        /// <param name="value"></param>
-        /// <returns>Inquiry<T></returns>
+        	T this[int index] { get; }
+        	Inquiry<T> Select(Comparutzu<T> comparison);
+        	/// <summary>
+        	/// 查找所有满足条件的数据
+        	/// </summary>
+        	/// <param name="param"></param>
+        	/// <param name="op"></param>
+        	/// <param name="value"></param>
+        	/// <returns>Inquiry<T></returns>
 		Inquiry<T> Select(string param, string op, object value);
-        /// <summary>
-        /// 查找一个符合条件的值
-        /// </summary>
-        /// <param name="param"></param>
-        /// <param name="op"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        	/// <summary>
+        	/// 查找一个符合条件的值
+        	/// </summary>
+        	/// <param name="param"></param>
+        	/// <param name="op"></param>
+        	/// <param name="value"></param>
+        	/// <returns></returns>
 		T Find(string param, string op, object value);
-        T Find(Comparutzu<T> comparison);
-        /// <summary>
-        /// 转为List类型
-        /// </summary>
-        /// <returns></returns>
-        List<T> ToList();
+        	T Find(Comparutzu<T> comparison);
+        	/// <summary>
+        	/// 转为List类型
+        	/// </summary>
+        	/// <returns></returns>
+        	List<T> ToList();
 		/// <summary>
-        /// 转为的List类型并排序
+        	/// 转为的List类型并排序
 		/// using System; 
 		///using System.Collections.Generic; 
 		
@@ -172,10 +172,10 @@ namespace Utzudb{
 		/// */ 
 		/// </summary>
 		List<T> ToList(IComparer<T> comparer);
-        List<T> ToList(Comparison<T> comparison);
-        /// <summary>
-        /// 总数量
-        /// </summary>
+        	List<T> ToList(Comparison<T> comparison);
+        	/// <summary>
+        	/// 总数量
+        	/// </summary>
 		int Count{get;}
 	}
 }
